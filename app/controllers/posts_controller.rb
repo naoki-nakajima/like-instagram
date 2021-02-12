@@ -20,6 +20,10 @@ class PostsController < ApplicationController
       redirect_to root_path
       flash[:alert] = "投稿に失敗しました"
     end
+
+    def show
+      @post = Post.find_by(id: params[:id])
+    end
   end
 
   private
