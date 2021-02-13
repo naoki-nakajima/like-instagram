@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-
   before_action :authenticate_user!
   
   def create
@@ -21,4 +20,5 @@ class LikesController < ApplicationController
   private
     def like_params
       params.permit(:post_id)
+    end
 end
